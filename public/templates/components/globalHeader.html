@@ -1,0 +1,9 @@
+<div id="globalHeaderTitle"><h1>Marvin Timer</h1></div>
+<div class="tabs" id="globalHeaderNav">
+    <ul class="nav nav-tabs">
+        <li data-ng-class="{active: pane.active}" data-ng-repeat="pane in panes">
+            <a href="#/{{pane.route}}" ng-click="activateTab(pane)" >{{pane.title}}</a>
+            <!--div ng-include="pane.content"></div-->
+        </li>
+    </ul>
+</div>

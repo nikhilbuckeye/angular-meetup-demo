@@ -1,0 +1,35 @@
+<div class="row-fluid">
+	<div class="span3">
+		<h3>Miami players</h3>
+		<div data-ng-repeat="player in players | filter: { team : 'Miami Heat' }">
+			{{ player.name | prettyName}} - 
+			<span data-ng-class="{ red : player.team == 'Miami Heat', green : player.team == 'Boston Celtics' }">{{player.team}}</span>
+			{{player.rating}}
+		</div>
+	</div>
+	<div class="span4 addNewPlayer">
+		<h4>Add new player</h4>
+		<div><input type="text" class="span12" data-ng-model="newPlayerName" placeholder="player name"></div>
+	    <div class="btn-group">
+		    <button type="button" class="btn btn-primary" data-ng-model="newPlayerTeam" btn-radio="'Miami Heat'">Miami Heat</button>	        <button type="button" class="btn btn-primary" data-ng-model="newPlayerTeam" btn-radio="'Boston Celtics'">Boston Celtics</button>
+		</div>
+		<input style="width: 43%; margin: 0;" data-ng-model="newPlayerRating" type="number" min="1" max="99" class="span5" placeholder="1 - 99">
+		<button style="margin-top: 10px" type="submit" class="btn" data-ng-click="addNewPlayer()">Add</button>
+	</div>
+	<div class="offset1 span3">
+		<h3>Boston players</h3>
+		<div data-ng-repeat="player in players | filter: { team : 'Boston Celtics' }">
+			{{player.name | prettyName}} - 
+			<span data-ng-class="{ red : player.team == 'Miami Heat', green : player.team == 'Boston Celtics' }">{{player.team}}</span>
+			{{player.rating}}
+		</div>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12" style="margin-top: 50px;">
+		<div class="progress" style="height: 60px">
+		  <div class="bar bar-danger" style="width: {{miamiBarPercent}}%;">{{miamiBarPercent | number:2}}%</div>
+		  <div class="bar bar-success" style="width: {{bostonBarPercent}}%;">{{bostonBarPercent | number:2}}%</div>
+		</div>
+	</div>
+</div>

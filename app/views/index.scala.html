@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" data-ng-app="app">
+<head>
+    <title>NBA finals</title>
+
+
+    <!-- jquery -->
+    <script src="/assets/library/jquery/jquery-2.0.3.js" type="text/javascript"></script>
+
+    <!-- misc library-->
+    <script src="/assets/library/misc/moment.js" type="text/javascript"></script>
+    <script src="/assets/library/misc/lodash.js" type="text/javascript"></script>
+
+    <!-- angularjs -->
+    <script src="/assets/library/angularjs/angular.js" type="text/javascript"></script>
+    <!-- custom directive -->
+    <script src="/assets/library/angularjs/truncate.js" type="text/javascript"></script>
+
+    <!-- bootstrap -->
+    <script src="/assets/library/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("library/bootstrap/css/bootstrap.css")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("library/bootstrap/css/bootstrap-responsive.css")">
+
+    <!-- angularui -->
+    <script src="/assets/library/angularui/ui-bootstrap-0.4.0.js" type="text/javascript"></script>
+    <script src="/assets/library/angularui/ui-bootstrap-tpls-0.4.0.js" type="text/javascript"></script>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+    <!-- angular app with routes n stuff-->
+    <script src="@routes.Assets.at("javascripts/app.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/stringFilterModule.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/googleModule.js")" type="text/javascript"></script>
+
+    <!-- angular controllers -->
+    <script src="@routes.Assets.at("javascripts/controllers/CommonController.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/controllers/HomeController.js")" type="text/javascript"></script>
+
+    <script src="@routes.Assets.at("javascripts/controllers/MatchController.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/controllers/TeamController.js")" type="text/javascript"></script>
+
+
+</head>
+<body class="container-fluid" id="IndexContainer">
+    <div data-ng-controller="CommonController">
+        <div data-ng-view class="row-fluid"></div>
+    </div>
+</body>
+</html>

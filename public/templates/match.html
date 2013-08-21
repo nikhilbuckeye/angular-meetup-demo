@@ -1,0 +1,9 @@
+<div data-ng-repeat="project in projects" class="span3 projectBox" data-ng-controller="ProjectProgressBarController">
+    <div><h4 class="projectName">{{project.name}}</h4></div>
+    <div><img class="projectImage" src="/assets/images/sample.jpg"></div>
+    <div><textarea row="3">{{project.description}}</textarea></div>
+    <div class="timeLogged">Time logged: {{prettyTime(project.estimatedTime)}}</div>
+    <div data-ng-class="{ progress : true, 'progress-striped' : project.inProgress, active : project.inProgress}">
+        <div data-ng-class="{bar : true, 'bar-warning' : !project.inProgress, 'bar-success' : project.inProgress}" style="width: {{project.percentageCompleted}}%;"></div>
+    </div>
+</div>
